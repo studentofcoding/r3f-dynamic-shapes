@@ -70,7 +70,15 @@ function handleInputChange(e) {
 }
 
 export default function App() {
-  const [shapesOnCanvas, setShapesOnCanvas] = useState([])
+  const initialShape = 
+    <Shape
+      shape={"box"}
+      dimensions={{ height: 100, width: 100, length: 10 }}
+      key={0}
+      position={[0, 0, 0]}
+    />
+
+  const [shapesOnCanvas, setShapesOnCanvas] = useState([initialShape])
 
   const addShape = (e) => {
 
